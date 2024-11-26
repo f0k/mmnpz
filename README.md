@@ -3,6 +3,7 @@ mmnpz
 
 [![PyPI: Version](https://img.shields.io/pypi/v/mmnpz)](https://pypi.org/project/mmnpz/)
 [![Documentation](https://readthedocs.org/projects/mmnpz/badge/?version=latest)](https://mmnpz.readthedocs.io/en/latest/)
+[![Tests](https://github.com/f0k/mmnpz/actions/workflows/tests.yml/badge.svg)](https://github.com/f0k/mmnpz/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE.md)
 
 **mmnpz** is a small Python package for handling large .npz files.
