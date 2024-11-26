@@ -1,6 +1,10 @@
 mmnpz
 =====
 
+[![PyPI: Version](https://img.shields.io/pypi/v/mmnpz)](https://pypi.org/project/mmnpz/)
+[![Documentation](https://readthedocs.org/projects/mmnpz/badge/?version=latest)](https://mmnpz.readthedocs.io/en/latest/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE.md)
+
 **mmnpz** is a small Python package for handling large .npz files.
 .npz files are uncompressed zip files containing numpy arrays.
 **mmnpz** unlocks their potential as an efficient, standardized
