@@ -9,10 +9,11 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  test:
 
     strategy:
       fail-fast: true
+      max-parallel: 1
       matrix:
         # Python 3.8 on all three OSs, other Python versions only on Ubuntu
         include:
