@@ -9,7 +9,7 @@ description = "Memory-mapped .npz files."
 readme = "README.md"
 classifiers = [
     "Intended Audience :: Science/Research",
-    "Development Status :: 4 - Beta",
+    "Development Status :: 5 - Production/Stable",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
     "Typing :: Typed",
