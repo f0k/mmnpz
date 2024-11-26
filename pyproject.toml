@@ -72,6 +72,7 @@ target-version = "py38"
 no_site_packages = true
 check_untyped_defs = true
 disable_error_code = ["import-untyped", "import-not-found"]
+exclude = ["build"]
 
 [[tool.mypy.overrides]]
 module = "tests.*"
