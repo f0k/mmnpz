@@ -1,0 +1,84 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mmnpz"
+dynamic = ["version"]
+description = "Memory-mapped .npz files."
+readme = "README.md"
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Typing :: Typed",
+]
+authors = [
+    {name = "Jan Schlüter", email = "jan.schlueter@jku.at"},
+]
+requires-python = ">=3.8"
+dependencies = [
+    "numpy>=1.20",
+    "typing_extensions>=4.6.0",
+]
+license = {file = "LICENSE"}
+
+[project.urls]
+Documentation = "https://mmnpz.readthedocs.io/"
+Repository = "https://github.com/f0k/mmnpz"
+Issues = "https://github.com/f0k/mmnpz/issues"
+Changelog = "https://github.com/f0k/mmnpz/blob/main/CHANGELOG.md"
+
+[project.optional-dependencies]
+dev = [
+    "isort",
+    "black",
+    "ruff",
+    "mypy",
+    "pytest",
+    "pytest-cov",
+    "build",
+]
+doc = [
+    "Sphinx",
+    "furo",
+    "sphinx-copybutton",
+    "sphinx-autobuild",
+    "myst-parser",
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "mmnpz.version.__version__"}
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+mmnpz = ["py.typed"]
+
+[tool.isort]
+profile = "black"
+multi_line_output = 5
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+line-length = 100
+target-version = "py38"
+
+[tool.mypy]
+no_site_packages = true
+check_untyped_defs = true
+disable_error_code = ["import-untyped", "import-not-found"]
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+strict_optional = false
+
+[tool.pytest.ini_options]
+addopts = "--cov=src --cov-fail-under=100 --cov-report=term-missing"
+testpaths = ["tests"]
+log_format = "%(asctime)s - %(levelname)s - %(name)s - %(message)s"
+log_level = "DEBUG"

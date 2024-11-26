@@ -1,0 +1,23 @@
+# python
+*.pyc
+*.pyo
+__pycache__
+
+# build artifacts
+.eggs/
+*.egg-info/
+build/
+dist/
+pip-wheel-metadata/
+
+# cache directories
+.*_cache/
+
+# dev tools
+.venv/
+
+# testing and continuous integration
+.coverage
+
+# documentation
+docs/build
