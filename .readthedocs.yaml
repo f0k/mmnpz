@@ -10,3 +10,8 @@ python:
       path: .
       extra_requirements:
         - doc
+
+build:
+  os: ubuntu-lts-latest
+  tools:
+    python: "3"
